@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+}
+body, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+body {
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    padding: 125px;
+    gap: 140px;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 50%;
+    padding: 10px;
+    margin: 130px auto 0 auto;
+}
+
+.right {
+    width: 50%;
+    position: relative;
+}
+
+.right .coklat {
+    width: 450px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 9999px;
+    flex-shrink: 0;
+}
+
+.right .putih {
+    width: 322px;
+    height: 322px;
+    object-fit: cover;
+    border-radius: 9999px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /* margin-bottom: 80px; */
+
+}
+
+button {
+    background-color: chocolate;
+    color: aliceblue;
+    padding: 24px 48px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 36px;
+    border: none;
+}
+
+button:hover {
+    box-shadow: 0 0 7px;
+    background-color: aliceblue;
+    color: chocolate;
+}
+
+.left h1 {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1, 25%;
+}
+
+.left p {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.coco-box {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -100px;
+    border-radius: 90px;
+    background: #ECDAC4;
+    display: flex;
+    align-items: flex-start;
+    gap: 88px;
+    padding: 30px 96px;
+    color: black;
+}
+
+.item {
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.item h1 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.box-item {
+    position: relative;
+    color: white;
+    background-color: #363032;
+    display: flex;
+    padding: 140px 64px 48px 64px;
+    gap: 64px;
+}
+
+.box {
+    width: 20%;
+}
+
+.box img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    border-radius: 16px;
+} 
+
+@media (max-width: 780px) {
+    .container {
+        flex-direction: column-reverse;
+        padding: 25px;
+    }
+    .left {
+        margin: 0;
+        width: 100%;
+    }
+    .right {
+        width: 100%;
+        
+        
+    }
+    .box-item {
+        flex-direction: column;
+    
+    }
+    .coco-box {
+        position: static;
+        transform: translateX(0%);
+        flex-direction: column;
+        width: 100%;
+        text-align: left;
+        padding: 80px 50px;
+    }
+    .item {
+        width: 100%;
+    }
+    .box {
+        width: 100%;
+    }
+
+    .putih{
+        /* margin-bottom: 49%; */
+    }
+    .coklat{
+        margin-bottom: 47%;
+        
+
+    }
+}
